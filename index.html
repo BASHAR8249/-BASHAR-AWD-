@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>تحذير أمني</title>
+<style>
+body{
+  background:black;
+  color:red;
+  font-family:monospace;
+  text-align:center;
+  padding-top:20%;
+}
+.blink{
+  animation:blink 0.8s infinite;
+}
+@keyframes blink{
+  50%{opacity:0;}
+}
+button{
+  margin-top:30px;
+  padding:15px 30px;
+  font-size:20px;
+  cursor:pointer;
+}
+</style>
+</head>
+<body>
+
+<h1 class="blink">⚠️ تم اختراق جهازك</h1>
+<h2>BASHAR AWD</h2>
+
+<p>جاري سحب البيانات...</p>
+
+<button onclick="start()">تشغيل النظام</button>
+
+<audio id="alarm" loop>
+  <source src="https://actions.google.com/sounds/v1/alarms/klaxon_alarm.ogg">
+</audio>
+
+<script>
+function start(){
+  document.getElementById("alarm").play();
+}
+</script>
+
+</body>
+</html>
